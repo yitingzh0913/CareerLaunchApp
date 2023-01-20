@@ -8,7 +8,7 @@ public class FileReading {
 
 		String currMovieTitle, userMovieTitle, currMovie;
 		int userInput, marker, bTestScore = 0;
-		File file = new File("/Users/faithcomising/Downloads/CareerLaunchApp-main/Bechdel.csv");
+		File file = new File("Bechdel.csv");
 		Scanner input = new Scanner(System.in);
 		boolean repeat = false;
 
