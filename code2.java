@@ -22,7 +22,6 @@ public class FileReading {
 				System.out.println("Enter a movie name: ");
 				//somethings happening here
 				userMovieTitle = input.nextLine();
-				System.out.println("next step");
 				System.out.println(userMovieTitle);
 				input = new Scanner(file);
 				boolean found = false;
