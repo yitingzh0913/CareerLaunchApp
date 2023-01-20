@@ -37,8 +37,7 @@ public class FileReading {
 			System.out.println(userMovieTitle + " did not pass the Bechdel Test. " + bTestScore
 					+ " out of the 3 criteria was met.");
 		} else {
-			System.out
-					.println(userMovieTitle + " did not pass the Bechdel Test. Only 2 out of the 3 criteria were met.");
+			System.out.println(userMovieTitle + " did not pass the Bechdel Test. Only 2 out of the 3 criteria were met.");
 		}
 
 	}
