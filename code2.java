@@ -13,18 +13,16 @@ public class FileReading {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Bechdel Test Program \n1. Definition \n2. Search \nEnter 1 or 2: ");
 		userInput = input.nextInt();
-		
+
 		if (userInput == 1) {
 			System.out.println(
 					"The Bechdel Test for films has 3 criteria: 1) the film has two female character, who 2) talk to each other, about 3) something other than a man");
 		}
 
 		do {
-
+			input.nextLine();
 			System.out.println("Enter a movie name: ");
-			// somethings happening here
 			userMovieTitle = input.nextLine();
-			System.out.println(userMovieTitle);
 			input = new Scanner(file);
 			boolean found = false;
 
@@ -53,9 +51,13 @@ public class FileReading {
 						userMovieTitle + " did not pass the Bechdel Test. Only 2 out of the 3 criteria were met.");
 			}
 
+			input = new Scanner(System.in);
 			System.out.println("Do you want to seach another movie? (y/n)");
-			if (input.next() == "y") {
+
+			if (input.next().charAt(0) == 'y') {
 				repeat = true;
+			} else {
+				repeat = false;
 			}
 		} while (repeat);
 		input.close();
