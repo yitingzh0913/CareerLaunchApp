@@ -15,8 +15,7 @@ public class FileReading {
 		userInput = input.nextInt();
 
 		if (userInput == 1) {
-			System.out.println(
-					"The Bechdel Test for films has 3 criteria: 1) the film has two female character, who 2) talk to each other, about 3) something other than a man");
+			System.out.println("The Bechdel Test for films has 3 criteria: 1) the film has two female character, who 2) talk to each other, about 3) something other than a man");
 		}
 
 		do {
@@ -44,11 +43,9 @@ public class FileReading {
 			} else if (bTestScore == 3) {
 				System.out.println(userMovieTitle + " passes all 3 criteria of the Bechdel Test!");
 			} else if (bTestScore == 0 || bTestScore == 1) {
-				System.out.println(userMovieTitle + " did not pass the Bechdel Test. " + bTestScore
-						+ " out of the 3 criteria was met.");
+				System.out.println(userMovieTitle + " did not pass the Bechdel Test. " + bTestScore + " out of the 3 criteria was met.");
 			} else {
-				System.out.println(
-						userMovieTitle + " did not pass the Bechdel Test. Only 2 out of the 3 criteria were met.");
+				System.out.println(userMovieTitle + " did not pass the Bechdel Test. Only 2 out of the 3 criteria were met.");
 			}
 
 			input = new Scanner(System.in);
