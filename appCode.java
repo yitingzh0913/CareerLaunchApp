@@ -4,11 +4,12 @@ import java.util.Scanner; // Import the Scanner class to read text files
 
 public class FileReading {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws FileNotFoundException {
 
 		String currMovieTitle, userMovieTitle, currMovie;
 		int marker, bTestScore = 0;
-		File file = new File("/Users/faithcomising/Downloads/CareerLaunchApp-main/Bechdel.csv");
+		File file = new File("Bechdel.csv");
 		System.out.println("Enter a movie name: ");
 		Scanner input = new Scanner(System.in);
 		userMovieTitle = input.nextLine();
@@ -33,6 +34,7 @@ public class FileReading {
 			System.out.println(userMovieTitle + " was not found in the database");
 		} else if (bTestScore == 3) {
 			System.out.println(userMovieTitle + " passes all 3 criteria of the Bechdel Test!");
+			
 		} else if (bTestScore == 0 || bTestScore == 1) {
 			System.out.println(userMovieTitle + " did not pass the Bechdel Test. " + bTestScore
 					+ " out of the 3 criteria was met.");
@@ -40,6 +42,9 @@ public class FileReading {
 			System.out.println(userMovieTitle + " did not pass the Bechdel Test. Only 2 out of the 3 criteria were met.");
 		}
 
+		input.close();
+
 	}
 
 }
+
